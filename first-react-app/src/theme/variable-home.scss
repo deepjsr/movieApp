@@ -1,0 +1,62 @@
+// SCSS Color Variables for App
+
+// Dark Mode Palette
+$primary-bg-color: #0d0d0d; // Deep Black
+$secondary-bg-color: #1c1c1e; // Charcoal
+$accent-color: #e50914; // Vibrant Red
+$text-color-light: #ffffff; // White
+$text-color-muted: #b3b3b3; // Light Gray
+$highlight-color: #ffc107; // Gold
+
+// Light Mode Palette (Optional)
+$light-primary-bg-color: #f5f5f5; // Soft White
+$light-secondary-bg-color: #ededed; // Warm Gray
+$light-accent-color: #008080; // Teal
+$text-color-dark: #2e2e2e; // Dark Gray
+$highlight-color-light: #ffd700; // Bright Yellow
+
+// Usage Examples
+body {
+  background-color: $primary-bg-color;
+  color: $text-color-light;
+}
+
+header {
+  background-color: $secondary-bg-color;
+  color: $text-color-light;
+}
+
+button {
+  background-color: $accent-color;
+  color: $text-color-light;
+
+  &:hover {
+    background-color: darken($accent-color, 10%);
+  }
+}
+
+.highlight {
+  color: $highlight-color;
+}
+
+.light-mode {
+  background-color: $light-primary-bg-color;
+  color: $text-color-dark;
+
+  header {
+    background-color: $light-secondary-bg-color;
+  }
+
+  button {
+    background-color: $light-accent-color;
+    color: $text-color-dark;
+
+    &:hover {
+      background-color: lighten($light-accent-color, 10%);
+    }
+  }
+
+  .highlight {
+    color: $highlight-color-light;
+  }
+}
