@@ -15,6 +15,7 @@ import {
   IonLabel,
   IonModal,
   IonPage,
+  IonText,
   IonTitle,
   IonToolbar,
   useIonLoading,
@@ -60,7 +61,10 @@ const Details: React.FC<DetailsPageProps> = ({ match }) => {
         {information && (
           <IonCard>
             <IonCardHeader>
-              <IonCardTitle>{information.Title}</IonCardTitle>
+              <IonCardTitle>
+                {information.Title}&nbsp;
+                <IonText color="medium">({information.Language})</IonText>
+              </IonCardTitle>
               <IonCardSubtitle>{information.Year}</IonCardSubtitle>
             </IonCardHeader>
             <IonCardContent text-center>

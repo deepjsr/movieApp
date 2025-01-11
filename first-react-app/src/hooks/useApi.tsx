@@ -18,6 +18,7 @@ export interface SearchResult {
   Type: string;
 }
 export interface DetailsResult {
+  Language: string;
   Genre: string;
   Title: string;
   Year: string;
